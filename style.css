@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -6,8 +8,8 @@
   text-decoration: none;
 }
 
-html {
-  font-family: "Noto Sans JP";
+body {
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .container {
@@ -218,7 +220,6 @@ html {
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
-  align-self: stretch;
 }
 
 .title h1 {
@@ -303,6 +304,7 @@ html {
 }
 
 .card-s3 {
+  width: 33.33%;
   position: relative;
   display: flex;
   padding-bottom: 25px;
@@ -337,7 +339,6 @@ html {
   display: flex;
   padding: 0px 20px;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
   align-self: stretch;
 }
@@ -363,6 +364,7 @@ html {
 /* section 3 coding end */
 
 /* section 4 table coding start  */
+
 .section4-main-box {
   position: relative;
   overflow: hidden;
@@ -374,89 +376,692 @@ html {
   transform: rotate(133.753deg);
   border-radius: 435.442px;
   border: 30px solid var(--_C_, rgba(156, 219, 166, 0.50));
+  opacity: 0.6;
   position: absolute;
-  right: -227.662px;
+  right: -160.662px;
   margin-top: 76.683px;
 }
 
 .section4-table-main {
   display: flex;
-  padding: 60px 0px 100px 0px;
+  padding: 60px 40px 100px 40px;
   flex-direction: column;
   align-items: center;
   align-self: stretch;
   position: relative;
+  gap: 30px;
 }
 
 .section4-table-main .title {
   align-items: center;
 }
 
-
-
-.table-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.custom-table {
+.grid-container {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.custom-table thead th {
-  background-color: #336b72;
-  color: white;
-  padding: 15px;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-.custom-table tbody td {
+  display: grid;
+  grid-template-columns: 1fr 1.42fr 1fr;
   padding: 20px;
-  border: 1px solid #ddd;
+  align-items: end;
+}
+
+.grid-header {
+  display: flex;
+  align-items: flex-end;
+}
+
+.grid-header h1 {
+  width: 100%;
+  display: flex;
+  height: 64px;
+  padding: 15px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  color: var(--main_white, #FFF);
   text-align: center;
-  font-size: 1rem;
-  vertical-align: middle;
+  font-family: "Noto Sans JP";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  background: var(--_C_base04, #468585);
+}
+
+.grid-item {
+  display: flex;
+  height: 95px;
+  padding: 15px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  border: 1px solid #DDD;
+  background: var(--main_white, #FFF);
+  position: relative;
+
 }
 
 .large {
-  background-color: #d7eff6;
-  font-weight: bold;
-  color: #0081c6;
+  color: var(--_C_base01, #50B498);
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  /* 27px */
+  border-right: 4px solid var(--_C_, #DEF9C4);
+  border-bottom: 1px solid var(--_C_, #50B498);
+  border-left: 4px solid var(--_C_, #50B498);
+  background: var(--main_white, #FFF);
+  display: flex;
+  padding: 15px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  position: relative;
 }
 
-.custom-table .large:hover {
-  background-color: #a7dbe7;
-  cursor: pointer;
+.grid-item p {
+  position: relative;
+  z-index: 99999;
 }
 
-/* Column width adjustments */
-
-th:nth-child(2),
-td:nth-child(2) {
-  width: 50%;
+.grid-item img {
+  position: absolute;
+  top: 15%;
+  left: 45%;
+  width: 65px;
+  height: 65px;
 }
 
-td:nth-child(1),
-td:nth-child(3),
-th:nth-child(1),
-th:nth-child(3) {
-  width: 25%;
-}
-
-/* Responsive design */
-
-@media (max-width: 768px) {
-  .custom-table thead th,
-  .custom-table tbody td {
-    font-size: 0.9rem;
-    padding: 10px;
-  }
-  .large {
-    font-size: 0.85rem;
-  }
+.large-header {
+  height: 86px;
+  color: var(--main_white, #FFF);
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  display: flex;
+  padding: 25px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 10px 10px 0px 0px;
+  background: var(--_C_, linear-gradient(90deg, #50B498 26%, #DEF9C4 90%));
 }
 
 /* section 4 table coding start  */
+
+/* options-section starts */
+
+.options-section {
+  display: flex;
+  padding: 60px 40px 100px 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+
+.options-section .title {
+  text-align: center;
+  width: 100%;
+  align-items: center;
+}
+
+.options-container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.option {
+  width: 50%;
+  display: flex;
+  padding-bottom: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  border-radius: 20px;
+  background: var(--main_white, #FFF);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.16);
+}
+
+.option img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  border-radius: 20px 20px 0px 0px;
+  background: var(--_C_base05, #F2FDE7);
+}
+
+.op-text-box {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: 0px 40px;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.op-text-box h1 {
+  color: var(--_C_base01, #50B498);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.op-text-box p {
+  color: var(--Black, #222);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+/* options-section ends */
+
+/* real estate steps start */
+
+.real-estate-steps-main {
+  width: 100%;
+  padding: 80px 0px;
+  background: linear-gradient(84deg, #468585 63.92%, #50B498 100%);
+}
+
+.real-estate-steps {
+  display: flex;
+  padding: 0px 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 50px;
+}
+
+.real-estate-steps .title h1 {
+  color: var(--main_white, #FFF);
+}
+
+.steps-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.step {
+  display: flex;
+  padding: 30px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 20px;
+  background: var(--main_white, #FFF);
+}
+
+.step h3 {
+  color: var(--_C_base01, #50B498);
+  font-family: Roboto;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.step h4 {
+  color: var(--Black, #222);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  min-width: max-content;
+}
+
+.step p {
+  color: var(--Black, #222);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.step img {
+  width: 100%;
+  height: auto;
+  border-radius: 7.742px;
+  background: var(--_C_base05, #F2FDE7);
+}
+
+.step-title {
+  width: 100%;
+  text-align: center;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+/* real estate steps ends */
+
+/* Customer Reviews Section Start */
+
+.customer-reviews {
+  display: flex;
+  padding: 100px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  align-self: stretch;
+  background: var(--_C_base05, #F2FDE7);
+}
+
+.cr-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  align-self: stretch;
+}
+
+.customer-reviews .title {
+  align-items: center;
+}
+
+.reviews-container {
+  display: flex;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.review-card {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 20px;
+  background: var(--main_white, #FFF);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.16);
+}
+
+.review-card img {
+  width: 100%;
+  height: auto;
+  max-height: 155px;
+  border-radius: 10px;
+  background: #FDFFFC;
+}
+
+.rc-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Spacing-XS, 8px);
+  align-self: stretch;
+}
+
+.review-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Spacing-XS, 8px);
+  align-self: stretch;
+}
+
+.review-header h4 {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-header h4 p {
+  color: var(--_C_base01, #50B498);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+.review-header h4 span {
+  width: 1px;
+  height: 12px;
+  background: #CCC;
+}
+
+.review-header h2 {
+  color: var(--_C_base01, #50B498);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.rating {
+  font-size: 18px;
+  color: #FFCB34;
+  font-weight: 700;
+}
+
+.rc-contents>p {
+  color: var(--Black, #222);
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  /* 22.4px */
+}
+
+/* Customer Reviews Section End */
+
+/* FAQ section starts */
+
+.faq-section-main {
+  display: flex;
+  padding: 100px 50px;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  align-self: stretch;
+}
+
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Spacing-S, 24px);
+  align-self: stretch;
+}
+
+.faq-item {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: 20px;
+  background: var(--main_white, #FFF);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.question {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 14px;
+}
+
+.faq-texts-q {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  width: 100%;
+}
+
+.question span {
+  color: var(--main_white, #FFF);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  display: flex;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  background: var(--_C_base01, #50B498);
+}
+
+.question p {
+  color: var(--Black, #222);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+.question svg {
+  margin-right: 25px;
+  width: 25px;
+  height: 25px;
+  transition: all .5s ease;
+  transform-origin: right center;
+  transform: rotate(180deg);
+}
+
+.answer {
+  display: none;
+  padding: 20px;
+  align-items: center;
+  gap: 15px;
+  align-self: stretch;
+  border-radius: 20px;
+  background: var(--_C_base05, #F2FDE7);
+}
+
+.answer span {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  border: 1px solid var(--_C_base01, #50B498);
+}
+
+.faq-item.active .answer {
+  display: flex;
+}
+
+.faq-item.active .question svg {
+  margin-right: 10px;
+  transform: rotate(0deg);
+}
+
+/* FAQ section end */
+
+/* Footer start */
+
+.footer-container {}
+
+.footert-top-box {
+  display: flex;
+  padding: 20px 20px 0px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 33px;
+  align-self: stretch;
+  background: var(--_C_base02, #9CDBA6);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-top {
+  display: flex;
+  position: relative;
+  z-index: 99;
+}
+
+.f-elips-1 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: -52px;
+  top: -113px;
+  border-radius: 400px;
+  border: 40px solid var(--_C_base01, #50B498);
+}
+
+.f-elips-2 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  right: -153px;
+  bottom: -197.059px;
+  border-radius: 400px;
+  border: 40px solid var(--_C_base01, #50B498);
+}
+
+.footer-top {
+  display: flex;
+  max-width: 880px;
+  padding: 0px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Spacing-M, 48px);
+  align-self: stretch;
+}
+
+.tect-section-f {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.tect-section-f h2 {
+  color: var(--main_white, #FFF);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.footer-section-link {
+  display: flex;
+  padding: 13.615px 34.038px;
+  justify-content: center;
+  align-items: center;
+  gap: 27.231px;
+  border-radius: 7.152px;
+  background: #06C755;
+  box-shadow: 0px 0px 14.303px 0px rgba(0, 0, 0, 0.30);
+  min-width: max-content;
+}
+
+.line-app-svg-f svg {
+  width: 38.618px;
+  height: 38.618px;
+  fill: var(--main_white, #FFF);
+}
+
+.icon-next-f svg {
+  width: 20.423px;
+  height: 13.615px;
+}
+
+.footer-section-link p {
+  display: flex;
+  flex-direction: column;
+  color: var(--main_white, #FFF);
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  min-width: fit-content;
+}
+
+.footer-top img {
+  width: 240px;
+  height: auto;
+}
+
+.footer-middle {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  background: var(--_C_base05, #F2FDE7);
+}
+
+.footer-middle-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-middle-text h1 {
+  color: var(--Black, #222);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+.footer-middle-text p {
+  color: var(--Black, #222);
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.footer-bottom {
+  display: flex;
+  padding: 30px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background: var(--main_white, #FFF);
+}
+
+.footer-bottom a {
+  color: #777;
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  text-decoration-line: underline;
+}
+
+.footer-bottom p {
+  color: #777;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+/* Footer end */

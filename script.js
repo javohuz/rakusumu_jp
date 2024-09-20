@@ -27,3 +27,11 @@ document.addEventListener("DOMContentLoaded", function() {
   
   styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
 });
+
+
+document.querySelectorAll('.question').forEach(item => {
+    item.addEventListener('click', () => {
+        const faqItem = item.parentElement;
+        faqItem.classList.toggle('active');
+    });
+});
