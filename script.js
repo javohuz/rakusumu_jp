@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const logosContainer = document.querySelector('.logos');
   const logos = Array.from(logosContainer.children);
   
-  const duplicatesNeeded = 10; // Number of times to duplicate logos
+  const duplicatesNeeded = 5; // Number of times to duplicate logos
 
   // Duplicate the logos
   for (let i = 0; i < duplicatesNeeded; i++) {
@@ -32,6 +32,15 @@ document.addEventListener("DOMContentLoaded", function() {
 document.querySelectorAll('.question').forEach(item => {
     item.addEventListener('click', () => {
         const faqItem = item.parentElement;
+
+        // Close all other FAQ items
+        // document.querySelectorAll('.faq-item').forEach(otherItem => {
+        //     if (otherItem !== faqItem) {
+        //         otherItem.classList.remove('active');
+        //     }
+        // });
+
+        // Toggle the clicked FAQ item
         faqItem.classList.toggle('active');
     });
 });
