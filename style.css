@@ -638,10 +638,19 @@ body {
     padding: 0px var(--Spacing-S, 24px);
   }
   .card-s3 img {
+    max-height: 330px;
+  }
+
+}
+
+@media (max-width:768pxpx) {
+  
+  .card-s3 img {
     max-height: 250px;
   }
 
 }
+
 /* section 3 coding end */
 
 /* section 4 table coding start  */
